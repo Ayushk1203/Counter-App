@@ -9,14 +9,32 @@ const res = document.getElementById('r');
 
     increment.addEventListener('click', (e)=>{
         let current = parseInt(result.value);
-        let v = isNaN(current)? 1 : current + 1;
-        result.value = v;
+        if(!isNaN(parseInt(custom.value))){
+            let cusval = parseInt(custom.value);
+            let v = isNaN(custom.value)? cusval : current += cusval;
+            result.value = v;
+        }else{
+            let v = isNaN(current)? 1 : current + 1;
+            result.value = v;
+        }
+        
     }); 
     
     decrement.addEventListener('click', (e)=>{
         let current = parseInt(result.value);
-        let v = isNaN(current)? -1 : current - 1;
-        result.value = v;
+        if(!isNaN(parseInt(custom.value))){
+            let cusval = parseInt(custom.value);
+            let v = isNaN(custom.value)? cusval : current -= cusval;
+            result.value = v;
+        }else{
+            let v = isNaN(current)? -1 : current - 1;
+            result.value = v;
+        }
+        
+    }); 
+
+    res.addEventListener('click',(e)=>{
+        result.value = 0;
     });
     
     
