@@ -6,9 +6,14 @@
 
 body{
     display:flex;
+    flex-direction: column;
     align-items:center;
     justify-content:center;
     margin-top: 20vh;
+}
+
+h1{
+    margin-bottom:100px;
 }
 
 .container{
