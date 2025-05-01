@@ -8,7 +8,17 @@ const res = document.getElementById('r');
 
 
     increment.addEventListener('click', (e)=>{
-        result.value= parseint(result.value) +1 ;
-    });  
+        let current = parseInt(result.value);
+        let v = isNaN(current)? 1 : current + 1;
+        result.value = v;
+    }); 
+    
+    decrement.addEventListener('click', (e)=>{
+        let current = parseInt(result.value);
+        let v = isNaN(current)? -1 : current - 1;
+        result.value = v;
+    });
+    
+    
 
 
